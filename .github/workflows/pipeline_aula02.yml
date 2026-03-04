@@ -5,14 +5,13 @@ on:
       - main
 jobs:
   build:    
-  runs-on: ubuntu-latest
-  steps:
- 
-    - name: Checkout código
-      uses: actions/checkout@v4
-    - name: Configurar Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-    - name: executar script com argumentos
-      run: python plus.py 3 4
+    runs-on: ubuntu-latest  # Adicionado recuo aqui
+    steps:                  # Adicionado recuo aqui
+      - name: Checkout código
+        uses: actions/checkout@v4
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: executar script com argumentos
+        run: python plus.py 3 4
