@@ -2,7 +2,7 @@ name: testar codin
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   build:    
     runs-on: ubuntu-latest  # Adicionado recuo aqui
