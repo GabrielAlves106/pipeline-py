@@ -16,11 +16,11 @@ jobs:
       - name: executar script com argumentos
         run: python plus.py 3 4
 
-deploy:
-  needs: build 
-  runs-on: ubuntu-latest 
-  steps:
-    - name: Checkout do códin
-      uses: actions/checkout@v4
-    - name: Isso é um deploy
-      run: echo "Enviando para o servidor..."
+  deploy:
+    needs: build 
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Checkout do códin
+        uses: actions/checkout@v4
+      - name: Isso é um deploy
+        run: echo "Enviando para o servidor..."
